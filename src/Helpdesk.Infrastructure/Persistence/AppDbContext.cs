@@ -2,15 +2,16 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Helpdesk.Infrastructure.Persistence
 {
     public sealed class AppDbContext : IdentityDbContext<AppUser, IdentityRole<Guid>, Guid>
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+        }
+
+        public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -20,6 +21,12 @@ namespace Helpdesk.Infrastructure.Persistence
             builder.Entity<AppUser>()
                 .HasIndex(u => new { u.TenantId, u.Email })
                 .IsUnique(false);
+
+            builder.Entity<RefreshToken>(e =>
+            {
+                e.HasKey(x => x.Id);
+                e.HasIndex(x => x.TokenHash).IsUnique();
+            });
         }
     }
 }

@@ -1,8 +1,6 @@
 <Solution>
-  <Folder Name="/Solution Items/">
-    <File Path=".gitignore" />
-  </Folder>
   <Folder Name="/src/">
+    <File Path=".gitignore" />
     <Project Path="src/Helpdesk.Api/Helpdesk.Api.csproj" />
     <Project Path="src/Helpdesk.Application/Helpdesk.Application.csproj" />
     <Project Path="src/Helpdesk.CLI/Helpdesk.CLI.csproj" Id="e56c9a99-82eb-4854-8160-e1982f430b22" />
