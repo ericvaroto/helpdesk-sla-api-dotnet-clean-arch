@@ -1,0 +1,95 @@
+########################################
+# .NET / Visual Studio / Rider
+########################################
+bin/
+obj/
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+########################################
+# Build outputs
+########################################
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+artifacts/
+
+########################################
+# Logs
+########################################
+*.log
+
+########################################
+# ASP.NET / .NET Secrets
+########################################
+# User Secrets (local only)
+secrets.json
+
+# appsettings overrides (local)
+appsettings.Development.json
+appsettings.Local.json
+
+########################################
+# Environment files
+########################################
+.env
+.env.*
+
+########################################
+# Database
+########################################
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+########################################
+# EF Core
+########################################
+# Snapshot files are OK to commit
+# Migrations should be committed
+# (nothing to ignore here on purpose)
+
+########################################
+# OS generated
+########################################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+########################################
+# Node / Frontend (caso use futuramente)
+########################################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+########################################
+# Test results / coverage
+########################################
+TestResults/
+coverage/
+coverage.cobertura.xml
+*.trx
+
+########################################
+# Temporary files
+########################################
+*.tmp
+*.temp
+*.swp
+*.bak
+
+########################################
+# Publish
+########################################
+publish/
